@@ -1,16 +1,58 @@
-# Electronics
+# Electronics and Embedded Systems
+
+Collection of Arduino-based projects focused on control systems, embedded logic, and hardware interfacing.  
+All projects are designed and simulated using Tinkercad.
 
 ## Projects
 
 ### 1. Washing Machine Motor Controller
-Arduino setup simulating a washing machine motor cycle: bidirectional DC motor control via L293D H-bridge, with PWM speed ramping, LED status indicator, and buzzer alert on cycle completion.
+**What it does:**
+Simulates a washing machine motor cycle using a bidirectional DC motor with controlled speed variation and cycle completion alerts.
+
+**Core Idea:**  
+Motor control using an H-bridge with PWM-based speed modulation.
+
+**Components Used:**  
+	•	Arduino  
+	•	L293D H-bridge motor driver  
+	•	DC motor  
+	•	LED (status indication)  
+	•	Buzzer  
+
+**How it Works:**  
+The L293D H-bridge enables bidirectional control of the DC motor, allowing it to switch between clockwise and counterclockwise rotation. PWM signals from the Arduino are used to gradually ramp motor speed up and down, mimicking washing cycles. LEDs indicate the state of operation, and a buzzer signals completion of the cycle.
+
+**Features:**  
+	•	Bidirectional motor control  
+	•	PWM-based speed ramping  
+	•	Visual status indication via LED  
+	•	Audio alert on cycle completion  
 
 **Stack:** Arduino (C++)
 
 <img src="Assets/Washing-Machine.jpeg" width="800">
 
 ### 2. 4-Function Calculator
-Arduino calculator with a 4x4 keypad and 16x2 LCD display. Implements a shunting-yard expression parser for correct operator precedence for whole numbers. Includes dynamic I2C address scanning, division-by-zero error handling, and result chaining.
+
+**What it does:**  
+Implements a basic calculator capable of evaluating arithmetic expressions with correct operator precedence.
+
+**Core Idea:**  
+Expression parsing using the shunting-yard algorithm.
+
+**Components Used:**  
+	•	Arduino  
+	•	4x4 keypad  
+	•	16x2 LCD display (I2C)  
+
+**How it Works:**  
+User input is taken through the keypad and parsed using a stack-based shunting-yard algorithm to ensure correct operator precedence. The processed expression is evaluated and displayed on the LCD. The system dynamically detects the I2C address of the display and handles runtime errors such as division by zero. Results can be reused in subsequent calculations.
+
+**Features:**  
+	•	Correct operator precedence handling  
+	•	Dynamic I2C address scanning  
+	•	Division-by-zero error handling  
+	•	Result chaining for continuous calculations  
 
 **Stack:** Arduino (C++)
 
