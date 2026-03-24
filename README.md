@@ -6,7 +6,7 @@ All projects are designed and simulated using Tinkercad.
 ## Projects
 
 ### 1. Washing Machine Motor Controller
-**What it does:**
+**What it Does:**  
 Simulates a washing machine motor cycle using a bidirectional DC motor with controlled speed variation and cycle completion alerts.
 
 **Core Idea:**  
@@ -34,7 +34,7 @@ The L293D H-bridge enables bidirectional control of the DC motor, allowing it to
 
 ### 2. 4-Function Calculator
 
-**What it does:**  
+**What it Does:**  
 Implements a basic calculator capable of evaluating arithmetic expressions with correct operator precedence.
 
 **Core Idea:**  
