@@ -3,9 +3,7 @@
 Collection of Arduino-based projects focused on control systems, embedded logic, and hardware interfacing.  
 All projects are designed and simulated using Tinkercad.
 
-## Projects
-
-### 1. Washing Machine Motor Controller
+## 1. Washing Machine
 **What it Does:**  
 Simulates a washing machine motor cycle using a bidirectional DC motor with controlled speed variation and cycle completion alerts.
 
@@ -28,12 +26,10 @@ The L293D H-bridge enables bidirectional control of the DC motor, allowing it to
 	•	Visual status indication via LED  
 	•	Audio alert on cycle completion  
 
-**Stack:** Arduino (C++)
-
 <p align="center">
 <img src="Assets/Washing-Machine.jpeg" width="800"></p>
 
-### 2. 4-Function Calculator
+## 2. 4-Function Calculator
 
 **What it Does:**  
 Implements a basic calculator capable of evaluating arithmetic expressions with correct operator precedence.
@@ -55,12 +51,10 @@ User input is taken through the keypad and parsed using a stack-based shunting-y
 	•	Division-by-zero error handling  
 	•	Result chaining for continuous calculations  
 
-**Stack:** Arduino (C++)
-
 <p align="center">
 <img src="Assets/Calculator.jpeg" width="500"></p>
 
-### 3. Digital Piano
+## 3. Digital Piano
 
 **What it Does:**  
 Implements a minimal digital piano using an Arduino and piezo buzzer, mapping discrete button inputs to musical frequencies in real time.
@@ -76,12 +70,10 @@ The system continuously scans button states in a polling loop. When a button is 
 	•	Direct mapping of inputs to musical frequencies  
 	•	Immediate sound generation using Arduino `tone()` function  
 
-**Stack:** Arduino (C++)
-
 <p align="center">
 <img src="Assets/Piano.jpeg" width="800"></p>
 
-## 4. LED Matrix Tetris
+## 4. Tetris
 
 **What it Does:**  
 Implements a simplified Tetris-style game on an 8×8 LED matrix, including shape spawning, movement, rotation, collision detection, and line clearing.
@@ -106,8 +98,32 @@ Rotation is implemented using a matrix transformation, with boundary and collisi
 	•	Multiple shape types with random spawning  
 	•	Button-based lateral movement and rotation control  
 
-**Stack:**  
-Arduino (C++)
-
 <p align="center">
 <img src="Assets/Tetris.jpeg" width="800"></p>
+
+## 5. Telegraph (Morse Code)
+
+**What it Does:**  
+Implements a real-time Morse code input system using a single button and decodes it into English text displayed on a 16×2 LCD screen.
+
+**Core Idea:**  
+Encoding information through temporal patterns of input, where duration and spacing define symbolic structure.
+
+**How it Works:**  
+The system interprets button press duration as Morse signals. A short press is mapped to a dot (·), while a longer press is mapped to a dash (–). These inputs are accumulated into a symbolic string representing a single character in Morse code.
+
+When the user stops interacting, timing gaps are used to determine structural boundaries. A pause beyond a defined threshold triggers decoding of the current symbol into a corresponding alphabet letter. A longer inactivity period inserts a space, indicating word separation.
+
+The decoded output is continuously rendered on a 16×2 LCD display. The system maintains both the raw Morse input and the translated text simultaneously, updating the display in real time.
+
+**Features:**  
+	•	Single-button Morse code input system  
+	•	Time-based encoding of dots and dashes  
+	•	Automatic letter detection using inactivity timing  
+	•	Word separation via extended pause detection  
+	•	Real-time LCD output of decoded text  
+	•	LED feedback during input for state indication  
+	•	Full A–Z Morse decoding dictionary  
+
+<p align="center">
+<img src="Assets/Telegraph.jpeg" width="800"></p>
