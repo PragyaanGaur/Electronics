@@ -59,3 +59,24 @@ User input is taken through the keypad and parsed using a stack-based shunting-y
 
 <p align="center">
 <img src="Assets/Calculator.jpeg" width="500"></p>
+
+### 3. Digital Piano
+
+**What it Does:**  
+Implements a minimal digital piano using an Arduino and piezo buzzer, mapping discrete button inputs to musical frequencies in real time.
+
+**Core Idea:**  
+Real-time mapping of discrete human input to frequency generation. 
+
+**How it Works:**  
+The system continuously scans button states in a polling loop. When a button is pressed, it triggers a corresponding frequency output through a piezo buzzer. The implementation prioritizes low latency over architectural complexity, ensuring immediate auditory feedback.
+
+**Features:**  
+	•	8-button real-time input system  
+	•	Direct mapping of inputs to musical frequencies  
+	•	Immediate sound generation using Arduino `tone()` function  
+
+**Stack:** Arduino (C++)
+
+<p align="center">
+<img src="Assets/Piano.jpeg" width="500"></p>
