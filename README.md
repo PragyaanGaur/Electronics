@@ -79,4 +79,4 @@ The system continuously scans button states in a polling loop. When a button is 
 **Stack:** Arduino (C++)
 
 <p align="center">
-<img src="Assets/Piano.jpeg" width="500"></p>
+<img src="Assets/Piano.jpeg" width="800"></p>
