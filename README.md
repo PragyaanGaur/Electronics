@@ -80,3 +80,34 @@ The system continuously scans button states in a polling loop. When a button is 
 
 <p align="center">
 <img src="Assets/Piano.jpeg" width="800"></p>
+
+## 4. LED Matrix Tetris
+
+**What it Does:**  
+Implements a simplified Tetris-style game on an 8×8 LED matrix, including shape spawning, movement, rotation, collision detection, and line clearing.
+
+**Core Idea:**  
+Grid-based game logic mapped onto a multiplexed LED display with real-time input control.
+
+**How it Works:**  
+The system maintains an 8×8 board representing locked blocks and a separate 4×4 matrix for the active falling shape. Shapes are spawned at the top and descend at fixed time intervals. Movement is controlled via button inputs, while collision detection ensures shapes remain within bounds and do not overlap existing blocks.
+
+The LED matrix is driven using row-column multiplexing. Each frame, rows are activated sequentially while corresponding column states are set to render both the static board and the active shape. This rapid scanning creates the perception of a continuous display.
+
+When a shape can no longer move downward, it is locked into the board. The system then checks for fully filled rows, clears them, and shifts the board downward. New shapes are spawned, and the cycle repeats.
+
+Rotation is implemented using a matrix transformation, with boundary and collision checks applied before committing the rotation.
+
+**Features:**  
+	•	8×8 LED matrix rendering via multiplexing  
+	•	Real-time falling block system with adjustable speed  
+	•	Collision detection for movement and rotation  
+	•	Line clearing with board shifting logic  
+	•	Multiple shape types with random spawning  
+	•	Button-based lateral movement and rotation control  
+
+**Stack:**  
+Arduino (C++)
+
+<p align="center">
+<img src="Assets/Tetris.jpeg" width="800"></p>
