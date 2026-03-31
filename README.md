@@ -152,3 +152,28 @@ The processed temperature is displayed on a 16×2 LCD. If the smoothed temperatu
 
 <p align="center">
 <img src="Assets/Thermometer.jpeg" width="800"></p>
+
+## 7. Digital Alarm Clock
+
+**What it Does:**  
+Implements a digital clock with real-time timekeeping, user-configurable alarm settings, and buzzer-based alert functionality.
+
+**Core Idea:**  
+Maintaining and manipulating time as a stateful system with user-controlled parameter updates.
+
+**How it Works:**  
+The system tracks time using the `millis()` function, incrementing seconds at one-second intervals and cascading updates to minutes and hours. Time is maintained in a 24-hour format with proper rollover conditions.
+
+User interaction is handled through three buttons: mode selection, increment, and set. The system operates in multiple modes, allowing the user to modify hours, minutes, and alarm settings. Button presses are detected using state transitions to ensure controlled input without repeated triggering.
+
+The current time and alarm time are continuously displayed on a 16×2 LCD. When the system time matches the configured alarm time, a buzzer is activated to signal the alert condition.
+
+**Features:**
+- Real-time clock implementation using `millis()`  
+- Multi-mode interface for setting time and alarm  
+- 24-hour time format with rollover handling  
+- LCD display of current time and alarm time  
+- Buzzer-based alarm trigger system  
+
+<p align="center">
+<img src="Assets/Alarm.jpeg" width="800"></p>
